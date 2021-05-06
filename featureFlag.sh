@@ -12,7 +12,7 @@ fi
 ### Setting Permission & Mounting ###
 sudo mount -o remount,rw /vendor
 ### Backing UP ###
-sudo [ -e $file.backup ] && echo -e "${red}---> Backup Exist${white}" || sudo cp $file $file.backup; echo -e "${green}---> $file Backup Completed${white}"
+sudo [ -e $file.backup ] && echo -e "${red}---> Backup Exist${white}" || sudo cp $file $file.backup && echo -e "${green}---> $file Backup Completed${white}"
 ### Checking ON of OFF ###
 sudo cat $file | grep "persist.sys.fflag.override.settings_fuse=true" &> /dev/null
 if [ $? -ne 0 ]; then
