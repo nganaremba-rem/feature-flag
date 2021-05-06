@@ -24,7 +24,7 @@ if [ $? -ne 0 ]; then
 else
   echo -e "persist.sys.fflag.override.settings_fuse=${green}true${white}"
 fi
-read -n1 -p $"\nPress 1 to toggle or Press 0 to exit" input
+read -n1 -p $"Press 1 to toggle or Press 0 to exit" input
 if [ $input -eq 1 ]; then
 echo -e "${red}"
 sudo cat $file
