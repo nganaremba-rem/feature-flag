@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
   echo -e "${red}Root Permission Unavailable${white}"
   exit
 fi
-
+sudo mount -o remount,rw /
 sudo mount -o remount,rw /vendor
 ### Backing UP ###
 if [ -e "$file.backup" ]; then
@@ -35,4 +35,5 @@ sudo cat $file
 echo -e "${white}"
 fi
 sudo mount -o remount,ro /vendor
-  
+sudo mount -o remount,ro /
+echo
