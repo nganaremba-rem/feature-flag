@@ -21,7 +21,7 @@ else
   echo -e "persist.sys.fflag.override.settings_fuse=${green}true${white}"
 fi
 ### Toggle Command ###
-read -n1 -p $"Press 1 to toggle or Press 0 to exit" input
+read -n1 -p $"Press 1 to toggle or Press 0 to exit: " input
 if [ $input -eq 1 ]; then
 echo -e "${red}Default Last Line"
 sudo tail -1 $file
